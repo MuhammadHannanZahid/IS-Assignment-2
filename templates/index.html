@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cipher Encryption Tool | Text Encryption</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Cipher Encryption Tool</h1>
+        <p class="subtitle">Secure Text Encryption & Decryption</p>
+        
+        <div class="input-group">
+            <label for="inputText">Enter Plaintext or Ciphertext</label>
+            <textarea id="inputText" rows="4" placeholder="Type your text here..."></textarea>
+        </div>
+
+        <div class="controls">
+            <div class="select-group">
+                <label for="algorithm">Algorithm</label>
+                <select id="algorithm" required>
+                    <option value="" disabled selected>Select method...</option>
+                    <option value="aes">AES-256</option>
+                    <option value="base64">Base64</option>
+                    <option value="caesar">Caesar Cipher</option>
+                    <option value="sha256">SHA-256 (Hash)</option>
+                </select>
+            </div>
+
+            <div class="select-group" id="shiftContainer" style="display: none;">
+                <label for="shiftValue">Shift Value</label>
+                <input type="number" id="shiftValue" value="3">
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button onclick="processData('encrypt')" class="btn encrypt">Encrypt</button>
+            <button onclick="processData('decrypt')" class="btn decrypt">Decrypt</button>
+        </div>
+
+        <p id="errorMsg" class="error"></p>
+
+        <div class="input-group">
+            <label for="outputText">Result</label>
+            <textarea id="outputText" rows="4" readonly placeholder="Output will appear here..."></textarea>
+        </div>
+        
+        <button onclick="copyToClipboard()" class="btn copy">Copy to Clipboard</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
