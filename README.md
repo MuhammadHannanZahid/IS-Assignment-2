@@ -9,7 +9,7 @@
 
 ---
 
-## ✨ Features
+## Features
 
 - **AES-256 Encryption:** Industry-standard symmetric encryption using Cipher Block Chaining (CBC) and randomized Initialization Vectors (IV).
 - **Dynamic Caesar Cipher:** Classic substitution cipher with a dynamically adjustable shift value that updates the UI in real-time.
@@ -20,7 +20,7 @@
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - **HTML5:** Semantic structure.
@@ -35,7 +35,7 @@
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 Follow these instructions to get a copy of the project up and running on your local machine.
 
